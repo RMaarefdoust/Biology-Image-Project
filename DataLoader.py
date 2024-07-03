@@ -44,7 +44,7 @@ transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485], std=[0.229]),  # Assuming grayscale normalization
 ])
-
+#Dataset: https://drive.google.com/drive/folders/1blggnlhszgidXMX6QJh0YIVp6UFD-Qmc?usp=sharing
 train_dir = 'dataset/train'
 val_dir = 'dataset/valid'
 test_dir = 'dataset/test'
