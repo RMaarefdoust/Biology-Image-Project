@@ -22,10 +22,6 @@ This project focuses on analyzing neuron images using a variety of machine learn
 ## Getting Started
 To get started with this project, follow the steps below:
 
-### Prerequisites
-- Python 3.x
-- Necessary libraries (can be installed via `requirements.txt`)
-
 ### Installation
 1. Clone the repository:
     ```bash
