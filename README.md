@@ -13,9 +13,9 @@ This project aims to classify biology images using three different Convolutional
 ### Data Preparation
 
 1. **Data Splitting**: The dataset should be split into training, testing, and validation sets. Place the images in the corresponding folders under the `data` directory.
-   - `data/train`: Training data
-   - `data/test`: Testing data
-   - `data/validation`: Validation data
+   - `OriginalImages-split/train`: Training data
+   - `OriginalImages-split/test`: Testing data
+   - `OriginalImages-split/val`: Validation data
 
 2. **Preprocessing**: Run the preprocessing script to prepare the data for training.
 
@@ -35,17 +35,17 @@ Each model has a separate script for training. You can run the training scripts 
 
 1. **CNN + CBAM**:
     ```bash
-    python cnn_cbam.py
+    python /CNN-CBAM.py
     ```
 
 2. **ResNet50 + CBAM**:
     ```bash
-    python resnet50_cbam.py
+    python REZNET5-CBAM.py
     ```
 
 3. **ResNet110 + CBAM**:
     ```bash
-    python resnet110_cbam.py
+    python /REZNET110-CBAM.py
     ```
 
 
