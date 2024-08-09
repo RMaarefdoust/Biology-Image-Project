@@ -8,9 +8,10 @@ This project aims to classify biology images using three different Convolutional
 1. Generate Dataset Arsenic
 2. Augmentation-Train
 3. Simple CNN (Train, Test)
-4. CNN + CBAM  (Train,Test)
-5. ResNet50 + CBAM (Train,Test)
-6. ResNet110 + CBAM  (Train,Test)
+4. CNN + CBAM  (Train, Test)
+5. ResNet50(Train, Test)
+6. ResNet50 + CBAM (Train,Test)
+7. ResNet110 + CBAM  (Train,Test)
 
 
 ### Data Preparation
@@ -47,12 +48,17 @@ Each model has a separate script for training. You can run the training scripts 
     python /Test-CNN+CBAM.py
     ```
 
-3. **ResNet50 + CBAM**:
+3. **ResNet50**:
+    ```bash
+    python Train-ResNet50.py
+    python Test-ResNet50.py
+    ```
+
+4. **ResNet50 + CBAM**:
     ```bash
     python REZNET5-CBAM.py
     ```
-
-4. **ResNet110 + CBAM**:
+5. **ResNet110 + CBAM**:
     ```bash
     python /REZNET110-CBAM.py
     ```
