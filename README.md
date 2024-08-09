@@ -11,7 +11,7 @@ This project aims to classify biology images using three different Convolutional
 4. CNN + CBAM  (Train, Test)
 5. ResNet50(Train, Test)
 6. ResNet50 + CBAM (Train,Test)
-7. ResNet110 + CBAM  (Train,Test)
+
 
 
 ### Data Preparation
@@ -31,7 +31,11 @@ Original Images: https://drive.google.com/drive/folders/1f64Xn68NcBPcwBku6k71m5O
 
 Split Images: https://drive.google.com/drive/folders/1L1BTBZXdasal3ptrQtCFTtBpytGvXbry?usp=drive_link
 
+Data augmentation:
 
+```bash
+python  augmentation-train.py
+```
 
 ### Training the Models
 
@@ -58,10 +62,7 @@ Each model has a separate script for training. You can run the training scripts 
     ```bash
     python REZNET5-CBAM.py
     ```
-5. **ResNet110 + CBAM**:
-    ```bash
-    python /REZNET110-CBAM.py
-    ```
+
 
 
 ## Model Descriptions
