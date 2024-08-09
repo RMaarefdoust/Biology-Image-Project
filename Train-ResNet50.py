@@ -59,18 +59,15 @@ test_dataset = CustomImageDataset(data_dir=test_dir, transform=transform)
 class ResNet50(nn.Module):
     def __init__(self, num_classes=10):
         super(ResNet50, self).__init__()
-        # Load pre-trained ResNet-50 model
         self.resnet50 = models.resnet50(pretrained=True)
-        # Modify the first convolutional layer to accept grayscale images (1 channel)
         self.resnet50.conv1 = nn.Conv2d(in_channels=1, out_channels=64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
-        # Modify the final fully connected layer to match the number of classes
         self.resnet50.fc = nn.Linear(in_features=self.resnet50.fc.in_features, out_features=num_classes)
     
     def forward(self, x):
         return self.resnet50(x)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(device)
+print(f'Using device: {device}')
 
 model = ResNet50(num_classes=len(train_dataset.class_to_idx)).to(device)
 
@@ -97,14 +94,9 @@ if __name__ == '__main__':
         for images, labels in train_loader:
             images, labels = images.to(device), labels.to(device)
 
-            # Zero the parameter gradients
             optimizer.zero_grad()
-            
-            # Forward pass
             outputs = model(images)
             loss = criterion(outputs, labels)
-            
-            # Backward pass and optimize
             loss.backward()
             optimizer.step()
             
@@ -112,7 +104,7 @@ if __name__ == '__main__':
         
         epoch_loss = running_loss / len(train_loader)
         train_losses.append(epoch_loss)
-        print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {epoch_loss}')
+        print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {epoch_loss:.4f}')
 
         # Validation step
         model.eval()
@@ -131,8 +123,8 @@ if __name__ == '__main__':
         
         val_epoch_loss = val_running_loss / len(val_loader)
         val_losses.append(val_epoch_loss)
-        print(f'Validation Loss: {val_epoch_loss}')
-        print(f'Validation Accuracy: {100 * correct / total}%')
+        print(f'Validation Loss: {val_epoch_loss:.4f}')
+        print(f'Validation Accuracy: {100 * correct / total:.2f}%')
 
     # Plot and save the loss
     plt.figure()
@@ -145,6 +137,5 @@ if __name__ == '__main__':
     plt.close()
 
     # Save the trained model
-    torch.save(model.state_dict(), 'resnet50_model.pth')
-
+    torch.save(model.state_dict(), 'custom_resnet50_model.pth')
     print("Model saved as resnet50_model.pth")
