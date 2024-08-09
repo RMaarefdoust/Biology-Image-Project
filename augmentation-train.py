@@ -7,8 +7,8 @@ import cv2
 import numpy as np
 
 
-input_folder = 'OriginalImages-split/train/uM1.0'
-output_folder = 'OriginalImages-split/train-new/uM1.0'
+input_folder = 'OriginalImages-split/train/uM0.5'#1.0
+output_folder = 'OriginalImages-split/train-new/uM0.5'#1.0
 os.makedirs(output_folder, exist_ok=True)
 
 
