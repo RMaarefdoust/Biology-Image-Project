@@ -36,17 +36,23 @@ Split Images: https://drive.google.com/drive/folders/1L1BTBZXdasal3ptrQtCFTtBpyt
 
 Each model has a separate script for training. You can run the training scripts as follows:
 
-1. **CNN + CBAM**:
+1.**Simple CNN**:
     ```bash
-    python /CNN-CBAM.py
+    python /Train-Simple-CNN.py
+    python /Test-Simple-CNN.py
+    ```
+2. **CNN + CBAM**:
+    ```bash
+    python /Train-CNN+CBAM.py
+    python /Test-CNN+CBAM.py
     ```
 
-2. **ResNet50 + CBAM**:
+3. **ResNet50 + CBAM**:
     ```bash
     python REZNET5-CBAM.py
     ```
 
-3. **ResNet110 + CBAM**:
+4. **ResNet110 + CBAM**:
     ```bash
     python /REZNET110-CBAM.py
     ```
