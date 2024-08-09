@@ -5,10 +5,12 @@
 ## Project Overview
 
 This project aims to classify biology images using three different Convolutional Neural Network (CNN) models enhanced with Convolutional Block Attention Module (CBAM). The models used are:
-1. Simple CNN (Train, Test)
-2. CNN + CBAM  (Train,Test)
-3. ResNet50 + CBAM (Train,Test)
-4. ResNet110 + CBAM  (Train,Test)
+1. Generate Dataset Arsenic
+2. Augmentation-Train
+3. Simple CNN (Train, Test)
+4. CNN + CBAM  (Train,Test)
+5. ResNet50 + CBAM (Train,Test)
+6. ResNet110 + CBAM  (Train,Test)
 
 
 ### Data Preparation
