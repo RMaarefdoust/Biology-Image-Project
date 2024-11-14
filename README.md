@@ -4,38 +4,16 @@
 
 ## Project Overview
 
-This project aims to classify biology images using three different Convolutional Neural Network (CNN) models enhanced with Convolutional Block Attention Module (CBAM). The models used are:
-1. Generate Dataset Arsenic
-2. Augmentation-Train
-3. Simple CNN (Train, Test)
-4. CNN + CBAM  (Train, Test)
-5. ResNet50(Train, Test)
-6. ResNet50 + CBAM (Train,Test)
-
-
+This project aims to classify biological images using Convolutional Neural Network (CNN) models enhanced with Convolutional Block Attention Module (CBAM).
 
 ### Data Preparation
 
-1. **Data Splitting**: The dataset should be split into training, testing, and validation sets. Place the images in the corresponding folders under the `data` directory.
+**Data Splitting**: The dataset should be split into training, testing, and validation sets. Place the images in the corresponding folders under the `data` directory.
    - `OriginalImages-split/train`: Training data
    - `OriginalImages-split/test`: Testing data
    - `OriginalImages-split/val`: Validation data
 
-2. **Preprocessing**: Run the preprocessing script to prepare the data for training.
-
-```bash
-python  generate-dataset-Arsenic.py
-```
-
-Original Images: https://drive.google.com/drive/folders/1f64Xn68NcBPcwBku6k71m5OOS_cP_1RE?usp=drive_link
-
-Split Images: https://drive.google.com/drive/folders/1L1BTBZXdasal3ptrQtCFTtBpytGvXbry?usp=drive_link
-
-Data augmentation:
-
-```bash
-python  augmentation-train.py
-```
+Images dataset: https://drive.google.com/file/d/1Mp7vSnrGLwVAxNP5nosrRD3eWgt4eWaj/view?usp=sharing
 
 ### Training the Models
 
@@ -43,24 +21,25 @@ Each model has a separate script for training. You can run the training scripts 
 
 1.**Simple CNN**:
     ```bash
-    python /Train-Simple-CNN.py
-    python /Test-Simple-CNN.py
+    python CNN.py
+    python CNN_Test.py
     ```
 2. **CNN + CBAM**:
     ```bash
-    python /Train-CNN+CBAM.py
-    python /Test-CNN+CBAM.py
+    python CNN+CBAM.py
+    python CNN+CBAM_Test.py
     ```
 
 3. **ResNet50**:
     ```bash
-    python Train-ResNet50.py
-    python Test-ResNet50.py
+    python ResNet50.py
+    python ResNet50_Test.py
     ```
 
 4. **ResNet50 + CBAM**:
     ```bash
-    python REZNET5-CBAM.py
+    python Res+CBAM.py
+    python Res+CBAM_Test.py
     ```
 
 
