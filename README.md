@@ -24,6 +24,7 @@ Each model has a separate script for training. You can run the training scripts 
     python CNN.py
     python CNN_Test.py
     ```
+    
 2. **CNN + CBAM**:
     ```bash
     python CNN+CBAM.py
