@@ -19,7 +19,7 @@ Images dataset: https://drive.google.com/file/d/1Mp7vSnrGLwVAxNP5nosrRD3eWgt4eWa
 
 Each model has a separate script for training. You can run the training scripts as follows:
 
-1.**Simple CNN**:
+1. **Simple CNN**:
     ```bash
     python CNN.py
     python CNN_Test.py
